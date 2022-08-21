@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>flex section</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		 header {
+		 	margin-bottom: 2px;
+		 	background: wheat;
+		 	display: flex;
+		 	align-items: center;
+		 	height: 100px;
+		 	flex-wrap: wrap;
+
+
+		 }
+		 header nav {
+		 	margin: 0 auto;
+		 }
+		header nav ul {
+			list-style: none;
+			display: flex;
+			margin: 0;
+		}
+		header nav ul li a {
+			text-decoration: none;
+			padding: 0 20px;
+
+			color: black;
+		}
+		header nav ul li a:hover {
+			
+			font-weight: bolder;
+			color: white;
+			text-decoration: underline;
+			text-transform: uppercase;
+		}
+		header .icons i {
+			color: darkcyan;
+			padding: 0 10px;
+		}
+		header .icons i:hover {
+			color: black;
+			padding: 0 10px;
+			cursor: pointer;
+		}
+		.logo img {
+			vertical-align: middle;
+		}
+		.flex-box {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			
+		
+		}
+		.flex-box .flex-items {
+			width: 50%;
+			
+			
+
+		}
+		#box {
+			padding: 20px;
+			flex-grow: 0;
+
+		}
+
+		.flex-items img {
+			max-width: 100%;
+
+
+		}
+		.flex-items .heading h1 {
+			font-size: 85px;
+			margin-bottom: 20px;
+
+		}
+		.flex-items .para p {
+			word-spacing: 5px;
+			font-family: cursive;
+		}
+		.flex-items .btn button {
+			padding: 15px 40px;
+			border-radius: 10px;
+			background: black;
+			color: white;
+			border: none;
+			cursor: pointer;
+			transition: 1s;
+			text-transform: capitalize;
+			margin: 20px 0;
+		}
+		.flex-items .btn button:hover {
+			 background: #F3A391;
+			
+		}
+		.link {
+			margin-top: 30px;
+		}
+		.flex-items .link a {
+			text-decoration: none;
+			color: darkcyan;
+			font-size: 20px;
+			text-transform: capitalize;
+			margin: 0px 5px;
+		}
+		.flex-items .link a:hover {
+			color: black;
+			transition: 1s;
+		}
+		/*Responsive css starts*/
+		@media screen and (max-width: 750px)  {
+			header {
+               
+				flex-direction: row;
+				justify-content: center;
+				flex-wrap: wrap;
+				height: 150px;
+				
+
+				
+			}
+			header .logo {
+				order: 0;
+                flex-basis: 100%; 
+                text-align: center;
+				
+			}
+			header nav {
+				order: 2;
+
+			}
+			header .icons {
+				order: 1;
+				
+				
+			}
+		}
+		@media screen and (max-width: 360px) {
+			header ul {
+
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+		@media screen and (max-width: 1000px) {
+			
+			.flex-items .heading h1 {
+				font-size: 60px;
+				margin-bottom: 20px;
+			}
+		}
+		@media screen and (max-width: 850px) {
+			
+			.flex-items .heading h1 {
+				font-size: 40px;
+				margin-bottom: 20px;
+			}
+		}
+		@media screen and (max-width: 800px) {
+			
+			.flex-items .heading h1 {
+				font-size: 32px;
+				margin-bottom: 20px;
+			}
+			.flex-items .image img {
+				min-width: 100%;
+			}
+		}
+		@media screen and (max-width: 726px) {
+			
+			.flex-items .link  {
+				margin: 0;
+			}
+		}
+		@media screen and (max-width: 700px) {
+			
+			.flex-items, #box {
+				flex:  100%;
+			}
+
+			
+
+			}
+	</style> 
+</head>
+<body>
+	<!--header starts below-->
+<header>
+
+	<div class="logo">
+		<img src="images/logo.png" alt="">
+	</div>
+	<nav>
+		<ul>
+			<li><a href="">Home</a></li>
+			<li><a href="">News</a></li>
+			<li><a href="">About</a></li>
+			<li><a href="">Contact Us</a></li>
+			
+		</ul>
+		
+	</nav>
+	<div class="icons">
+			<i class="fa fa-facebook"></i>
+			<i class="fa fa-youtube"></i>
+			<i class="fa fa-twitter"></i>
+			<i class="fa fa-linkedin"></i>
+			<i class="fa fa-instagram"></i>
+		</div>
+</header>
+<!--header ends above and section starts here-->
+	<div class="flex-box">
+		<div class="flex-items" id="box">
+			<div class="heading">
+				<h1>Mindfulness for Everyone, Anywhere</h1>
+			</div>
+			<div class="para">
+				<p>Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Nihil quis est tempore velit recusandae tempora laborum sapiente natus distinctio assumenda molestiae id cum quidem harum expedita error asperiores, voluptatum dolorem nesciunt facere nam cupiditate, rem laboriosam. A tempore dicta quis repellat temporibus, alias iusto officia repudiandae esse animi! Earum quidem nesciunt id exercitationem? Modi, sed.</p>
+			</div>
+			<div class="btn"><button>click here</button></div>
+			<div class="link">
+				<a href=""><i class='fa fa-pinterest'></i></a>
+				<a href="">check out live classes</a>
+
+			</div>
+		</div>
+		<div class="flex-items">
+			<div class="image">
+				<img src="images/img1.jpg" alt="">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
